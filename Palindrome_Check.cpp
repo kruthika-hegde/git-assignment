@@ -4,10 +4,26 @@
 
 using namespace std;
 
-bool is_palindrome(int num) {
-    // Write Function Only
-}
+bool is_palindrome(int num) 
+{
+    
+    int revnum=0;
+    int temp=num;
+    int dig;
 
+    while (temp!=0)
+    {
+        dig=temp%10;
+        revnum=revnum*10+dig;
+        temp=temp/10;
+    }
+
+    if(revnum==num)
+    return 1;
+
+    else
+    return 0;
+}
 
 
 
